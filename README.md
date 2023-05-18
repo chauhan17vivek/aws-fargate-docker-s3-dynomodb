@@ -1,0 +1,1 @@
+# aws-fargate-docker-s3-dynomodb

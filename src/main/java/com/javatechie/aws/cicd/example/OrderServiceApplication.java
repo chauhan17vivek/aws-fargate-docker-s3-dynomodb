@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.amazonaws.services.s3.AmazonS3;
+
+import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -27,14 +29,14 @@ public class OrderServiceApplication {
 
 
     @GetMapping
-    public List<Order> fetchOrders() {
+    public String fetchOrders() {
         if (s3client.doesBucketExist("bucketName")) {
             log.info("Bucket name is not available."
                     + " Try again with a different Bucket name.");
-            return null;
+
         }
 
-
+        return "OK";
     }
 
     public static void main(String[] args) {

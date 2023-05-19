@@ -23,10 +23,7 @@ public class OrderServiceApplication {
 
 
     @Autowired
-    private  AmazonS3;
-
-
-
+    private  AmazonS3 s3client;
 
 
     @GetMapping
